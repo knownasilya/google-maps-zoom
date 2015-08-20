@@ -3,6 +3,7 @@ import layout from './template';
 
 const {
   on,
+  run,
   computed,
   observer: observes
 } = Ember;
@@ -18,23 +19,36 @@ export default Ember.Component.extend({
     var map = this.get('map');
 
     if (map) {
+      var listener = map.addListener('zoom_changed', run.bind(() => {
+        this.set('zoom', map.getZoom());
+      }));
+
       this.setProperties({
         zoom: map.getZoom(),
         maxZoom: map.maxZoom,
-        minZoom: map.minZoom
+        minZoom: map.minZoom,
+        zoomListener: listener,
       });
     }
   })),
+
+  teardown: on('willDestroyElement', function () {
+    var listener = this.get('zoomListener');
+
+    if (listener) {
+      google.maps.event.removeListener(listener);
+    }
+  }),
 
   actions: {
     zoomIn() {
       var disabled = this.get('inDisabled');
 
       if (!disabled) {
-        this.incrementProperty('zoom');
+        var value = this.incrementProperty('zoom');
 
         if (this.get('zoomin')) {
-          this.sendAction('zoomin');
+          this.sendAction('zoomin', value);
         }
       }
     },
@@ -43,10 +57,10 @@ export default Ember.Component.extend({
       var disabled = this.get('outDisabled');
 
       if (!disabled) {
-        this.decrementProperty('zoom');
+        var value = this.decrementProperty('zoom');
 
         if (this.get('zoomout')) {
-          this.sendAction('zoomout');
+          this.sendAction('zoomout', value);
         }
       }
     }
