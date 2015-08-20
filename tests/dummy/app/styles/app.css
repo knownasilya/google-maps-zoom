@@ -1,17 +1,18 @@
 body {
-  background-color: #999;
+  background-color: #eee;
 }
 
 #map {
   position: absolute !important;
-  top: 10px;
+  top: 70px;
   right: 10px;
-  width: 100%;
+  bottom: 10px;
+  left: 10px;
   height: 400px;
 }
 
 .knownasilya--google-maps-zoom {
   position: absolute;
-  top: 20px;
+  top: 80px;
   right: 20px;
 }
