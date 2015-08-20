@@ -1,0 +1,80 @@
+.knownasilya--google-maps-zoom {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+  box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 28px;
+  height: 55px;
+  background-color: #FFF;
+}
+
+.knownasilya--google-maps-zoom .zoomout img {
+  left: 0px;
+  top: -15px;
+}
+
+.knownasilya--google-maps-zoom .zoomout:hover img {
+  left: -30px;
+}
+
+.knownasilya--google-maps-zoom .zoomout.disabled img {
+  left: -15px;
+}
+
+.knownasilya--google-maps-zoom .zoomin img {
+  left: 0px;
+  top: 0px;
+}
+
+.knownasilya--google-maps-zoom .zoomin:hover img {
+  left: -30px;
+}
+
+.knownasilya--google-maps-zoom .zoomin.disabled img {
+  left: -15px;
+}
+
+.knownasilya--google-maps-zoom .zoom-btn {
+  position: relative;
+  width: 28px;
+  height: 27px;
+  left: 0px;
+  top: 0px;
+}
+
+.knownasilya--google-maps-zoom .zoom-btn.disabled {
+  cursor: default;
+}
+
+.knownasilya--google-maps-zoom img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  -webkit-user-select: none;
+  border: 0px;
+  padding: 0px;
+  width: 120px;
+  height: 54px;
+}
+
+.knownasilya--google-maps-zoom .divider {
+  position: relative;
+  overflow: hidden;
+  width: 67%;
+  height: 1px;
+  left: 16%;
+  top: 0px;
+  background-color: #E6E6E6;
+}
+
+.knownasilya--google-maps-zoom .image-container {
+  overflow: hidden;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 7px;
+  top: 6px;
+}
