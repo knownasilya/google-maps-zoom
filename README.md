@@ -1,6 +1,12 @@
-# Google-maps-zoom
+# google-maps-zoom
 
-This README outlines the details of collaborating on this Ember addon.
+Google Maps zoom control component for Ember CLI
+
+## Usage
+
+```hbs
+{{map-zoom map=map zoomout='zoomOut' zoomin='zoomIn'}}
+```
 
 ## Installation
 
