@@ -7,12 +7,14 @@ const {
   computed,
   observer: observes
 } = Ember;
+const defaultMax = 25;
+const defaultMin = 0;
 
 export default Ember.Component.extend({
   layout: layout,
   classNames: ['knownasilya--google-maps-zoom'],
-  minZoom: 0,
-  maxZoom: 25,
+  minZoom: defaultMin,
+  maxZoom: defaultMax,
   zoom: 0,
 
   setup: on('init', observes('map', function () {
@@ -25,8 +27,8 @@ export default Ember.Component.extend({
 
       this.setProperties({
         zoom: map.getZoom(),
-        maxZoom: map.maxZoom,
-        minZoom: map.minZoom,
+        maxZoom: map.maxZoom || defaultMax,
+        minZoom: map.minZoom || defaultMin,
         zoomListener: listener,
       });
     }
