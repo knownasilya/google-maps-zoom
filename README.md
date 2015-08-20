@@ -1,6 +1,9 @@
 # google-maps-zoom
 
-Google Maps zoom control component for Ember CLI
+Google Maps zoom control component for Ember CLI.
+
+This zoom component mimicks the new "Signed In" zoom control styles
+making it easy for mobile users, due to its bigger size.
 
 ## Usage
 
