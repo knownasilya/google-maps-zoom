@@ -1,7 +1,7 @@
 {
   "name": "google-maps-zoom",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "1.0.0",
+  "description": "Google Maps zoom control component addon for Ember CLI",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,12 +11,12 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": "https://github.com/knownasilya/google-maps-zoom",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
-  "license": "MIT",
+  "author": "Ilya Radchenko",
+  "license": "ISC",
   "devDependencies": {
     "broccoli-asset-rev": "^2.1.2",
     "ember-cli": "1.13.8",
@@ -37,7 +37,11 @@
     "ember-try": "0.0.6"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "component",
+    "google maps",
+    "zoom",
+    "control"
   ],
   "dependencies": {
     "ember-cli-htmlbars": "0.7.9",
