@@ -1,6 +1,6 @@
 {
   "name": "google-maps-zoom",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Google Maps zoom control component addon for Ember CLI",
   "keywords": [
     "ember-addon",
